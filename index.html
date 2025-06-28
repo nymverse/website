@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nym Ecosystem | The Private, Quantum-Resistant Web</title>
+    <meta name="description" content="The official website for the Nym Ecosystem, featuring the Nym Blockchain, QuID Universal Identity, and the NomadNet Social Platform.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Your Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation Canvas -->
+    <div id="particles-js"></div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo nav-route" data-page="home"><i class="fas fa-atom"></i> Nym Ecosystem</a>
+            <nav>
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="#" class="nav-route active" data-page="home">Home</a></li>
+                    <li class="nav-link dropdown">
+                        <a href="#">Whitepapers <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" class="nav-route" data-page="nym-whitepaper">Nym Whitepaper</a>
+                            <a href="#" class="nav-route" data-page="quid-whitepaper">QuID Whitepaper</a>
+                            <a href="#" class="nav-route" data-page="nomadnet-whitepaper">NomadNet Whitepaper</a>
+                        </div>
+                    </li>
+                    <li class="nav-link"><a href="#" class="nav-route" data-page="roadmap">Roadmap</a></li>
+                    <li class="nav-link"><a href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Homepage -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1 class="reveal">Building the Private, Quantum-Resistant Web</h1>
+                    <p class="reveal" style="transition-delay: 0.2s;">An ecosystem of decentralized technologies designed for sovereignty, privacy, and security in the post-quantum era.</p>
+                    <div class="hero-buttons reveal" style="transition-delay: 0.4s;">
+                        <a href="#" class="btn nav-route" data-page="roadmap">View Roadmap</a>
+                        <a href="#" class="btn btn-outline nav-route" data-page="nym-whitepaper">Read Whitepaper</a>
+                    </div>
+                </div>
+            </section>
+            <section id="pillars" class="section">
+                <div class="container">
+                    <h2 class="section-title reveal">The Three Pillars of the Ecosystem</h2>
+                    <div class="pillars-grid">
+                        <div class="pillar-card card reveal">
+                            <i class="fas fa-cogs pillar-icon"></i>
+                            <h3>Nym: The Foundation</h3>
+                            <p>A quantum-resistant, anonymous block-lattice cryptocurrency providing the secure, private, and scalable ledger that powers the entire ecosystem.</p>
+                        </div>
+                        <div class="pillar-card card reveal" style="transition-delay: 0.2s;">
+                            <i class="fas fa-id-card pillar-icon"></i>
+                            <h3>QuID: The Identity</h3>
+                            <p>A universal, nomadic, and offline-first authentication protocol. Your single, sovereign identity for any system, secure against quantum threats.</p>
+                        </div>
+                        <div class="pillar-card card reveal" style="transition-delay: 0.4s;">
+                            <i class="fas fa-globe pillar-icon"></i>
+                            <h3>NomadNet: The Application</h3>
+                            <p>A decentralized, anonymous social web platform. Own your digital space, enabling censorship-resistant content and a creator-first economy.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="architecture" class="section">
+                <div class="container">
+                    <h2 class="section-title reveal">Ecosystem Architecture</h2>
+                    <div class="architecture-diagram reveal">
+                        <div class="arch-layer">
+                            <div class="arch-layer-title">Application Layer: NomadNet</div>
+                            <div class="arch-layer-desc">Anonymous Social Web, Content Delivery, Creator Economy</div>
+                        </div>
+                        <div class="arch-layer">
+                            <div class="arch-layer-title">Identity Layer: QuID</div>
+                            <div class="arch-layer-desc">Universal Quantum-Resistant Authentication (Network Agnostic)</div>
+                        </div>
+                        <div class="arch-layer">
+                            <div class="arch-layer-title">Protocol Layer: Nym</div>
+                            <div class="arch-layer-desc">Privacy-Preserving Blockchain, Smart Contracts, Anonymous Transactions</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section id="cta" class="cta-section">
+                <div class="container reveal">
+                    <h2>Ready to Dive Deeper?</h2>
+                    <p style="color: var(--text-muted-color); max-width: 600px; margin: 20px auto 30px;">Explore the technical documentation, review the development roadmap, and join our community to help shape the future of the web.</p>
+                    <div class="hero-buttons">
+                        <a href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+                        <a href="#" class="btn btn-outline nav-route" data-page="roadmap">Explore Roadmap</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Whitepaper & Roadmap pages are dynamically populated by script.js -->
+        <div id="nym-whitepaper" class="page">
+            <div class="container whitepaper-page">
+                <aside class="whitepaper-sidebar"><h3 class="toc-title">Table of Contents</h3><ul class="toc" id="nym-toc"></ul></aside>
+                <div class="whitepaper-content"><div class="whitepaper-body" id="nym-whitepaper-body"></div></div>
+            </div>
+        </div>
+        <div id="quid-whitepaper" class="page">
+            <div class="container whitepaper-page">
+                <aside class="whitepaper-sidebar"><h3 class="toc-title">Table of Contents</h3><ul class="toc" id="quid-toc"></ul></aside>
+                <div class="whitepaper-content"><div class="whitepaper-body" id="quid-whitepaper-body"></div></div>
+            </div>
+        </div>
+        <div id="nomadnet-whitepaper" class="page">
+            <div class="container whitepaper-page">
+                <aside class="whitepaper-sidebar"><h3 class="toc-title">Table of Contents</h3><ul class="toc" id="nomadnet-toc"></ul></aside>
+                <div class="whitepaper-content"><div class="whitepaper-body" id="nomadnet-whitepaper-body"></div></div>
+            </div>
+        </div>
+        <div id="roadmap" class="page">
+            <div class="container">
+                <h2 class="section-title">Development Roadmap</h2>
+                <div class="roadmap-tabs">
+                    <div class="roadmap-tab active" data-tab="nym-roadmap">Nym</div>
+                    <div class="roadmap-tab" data-tab="quid-roadmap">QuID</div>
+                    <div class="roadmap-tab" data-tab="nomadnet-roadmap">NomadNet</div>
+                </div>
+                <div id="nym-roadmap" class="roadmap-content active"></div>
+                <div id="quid-roadmap" class="roadmap-content"></div>
+                <div id="nomadnet-roadmap" class="roadmap-content"></div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p>© <span id="copyright-year"></span> Nym Ecosystem. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="particles.min.js"></script>
+    
+    <!-- Your Custom Script (defer ensures it runs after DOM is parsed) -->
+    <script src="script.js" defer></script>
+</body>
+</html>
