@@ -4,18 +4,17 @@ const CONTENT_URLS = {
     // Whitepapers
     'nym-whitepaper': 'https://raw.githubusercontent.com/nymverse/nym/master/docs/whitepaper.md',
     'quid-whitepaper': 'https://raw.githubusercontent.com/nymverse/quid/master/docs/whitepaper.md',
-    'nomadnet-whitepaper': 'https://raw.githubusercontent.com/nymverse/nomadnet/master/docs/whitepaper.md',
-    // Roadmaps (assuming a similar file structure)
+    'axon-whitepaper': 'https://raw.githubusercontent.com/nymverse/nomadnet/master/docs/whitepaper.md',
+    // Roadmaps
     'nym-roadmap': 'https://raw.githubusercontent.com/nymverse/nym/master/docs/roadmap.md',
     'quid-roadmap': 'https://raw.githubusercontent.com/nymverse/quid/master/docs/roadmap.md',
-    'nomadnet-roadmap': 'https://raw.githubusercontent.com/nymverse/nomadnet/master/docs/roadmap.md'
+    'axon-roadmap': 'https://raw.githubusercontent.com/nymverse/nomadnet/master/docs/roadmap.md'
 };
 
 
 // --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', () => {
     // Basic UI Setup
-    setupCopyrightYear();
     setupMobileNav();
     setupPageRouting();
     setupScrollAnimations();
@@ -27,10 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // --- UI & NAVIGATION ---
-
-function setupCopyrightYear() {
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-}
 
 function setupMobileNav() {
     const toggleBtn = document.querySelector('.mobile-nav-toggle');
@@ -73,7 +68,7 @@ function navigateTo(pageId) {
         window.scrollTo(0, 0);
 
         if (pageId.includes('whitepaper')) {
-            loadWhitepaper(pageId);
+            loadDocument(pageId);
         } else if (pageId === 'roadmap') {
             loadAllRoadmaps();
         }
@@ -104,7 +99,7 @@ async function fetchMarkdown(url) {
     }
 }
 
-async function loadWhitepaper(pageId) {
+async function loadDocument(pageId) {
     if (loadedContent.has(pageId)) return;
 
     const bodyEl = document.getElementById(`${pageId}-body`);
@@ -120,18 +115,18 @@ async function loadWhitepaper(pageId) {
     const markdown = await fetchMarkdown(url);
     bodyEl.innerHTML = marked.parse(markdown);
     
-    generateToc(bodyEl, tocEl);
+    generateToc(bodyEl, tocEl, pageId);
     setupTocScrollSpy(bodyEl, tocEl);
     loadedContent.add(pageId);
 }
 
 // --- TABLE OF CONTENTS LOGIC ---
 
-function generateToc(contentEl, tocEl) {
+function generateToc(contentEl, tocEl, pageId) {
     tocEl.innerHTML = '';
     const headings = contentEl.querySelectorAll('h2, h3, h4');
     headings.forEach((heading, index) => {
-        const id = `heading-${page.id}-${index}`;
+        const id = `heading-${pageId}-${index}`;
         heading.id = id;
         const link = document.createElement('a');
         link.href = `#${id}`;
@@ -186,7 +181,7 @@ function setupRoadmapTabs() {
 async function loadAllRoadmaps() {
     if (loadedContent.has('all-roadmaps')) return;
 
-    const roadmapIds = ['nym-roadmap', 'quid-roadmap', 'nomadnet-roadmap'];
+    const roadmapIds = ['nym-roadmap', 'quid-roadmap', 'axon-roadmap'];
     for (const id of roadmapIds) {
         const container = document.getElementById(id);
         const url = CONTENT_URLS[id];
