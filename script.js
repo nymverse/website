@@ -2,13 +2,13 @@
 // Explicit URLs for each content file, fetched directly from their repositories.
 const CONTENT_URLS = {
     // Whitepapers
-    'nym-whitepaper': 'https://raw.githubusercontent.com/nymverse/nym/master/docs/whitepaper.md',
-    'quid-whitepaper': 'https://raw.githubusercontent.com/nymverse/quid/master/docs/whitepaper.md',
-    'axon-whitepaper': 'https://raw.githubusercontent.com/nymverse/nomadnet/master/docs/whitepaper.md',
+    'nym-whitepaper': 'https://raw.githubusercontent.com/nymos/nym/master/docs/whitepaper.md',
+    'quid-whitepaper': 'https://raw.githubusercontent.com/nymos/quid/master/docs/whitepaper.md',
+    'axon-whitepaper': 'https://raw.githubusercontent.com/nymos/nomadnet/master/docs/whitepaper.md',
     // Roadmaps
-    'nym-roadmap': 'https://raw.githubusercontent.com/nymverse/nym/master/docs/roadmap.md',
-    'quid-roadmap': 'https://raw.githubusercontent.com/nymverse/quid/master/docs/roadmap.md',
-    'axon-roadmap': 'https://raw.githubusercontent.com/nymverse/nomadnet/master/docs/roadmap.md'
+    'nym-roadmap': 'https://raw.githubusercontent.com/nymos/nym/master/docs/roadmap.md',
+    'quid-roadmap': 'https://raw.githubusercontent.com/nymos/quid/master/docs/roadmap.md',
+    'axon-roadmap': 'https://raw.githubusercontent.com/nymos/nomadnet/master/docs/roadmap.md'
 };
 
 
